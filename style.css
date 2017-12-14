@@ -1,0 +1,210 @@
+/* this is the stylesheet for my-personal-site */
+
+* {
+  box-sizing: border-box;     /* 立刻把加入這段設定當作標準程序 */
+  font-family: sans-serif;
+}
+
+/* nav */
+
+#nav {
+  background-color: #ff6600;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;     /* 讓nav永遠顯示在最上方，高於其他元素 */
+}
+
+.menu {
+  float: right;
+}
+
+.menu li {
+  width: 150px;     /* 因為li是block元素，會佔滿一整行，因此修改按鈕寬度 */
+  padding: 10px 0px;      /* 調整盒子屬性，抓到padding和margin的距離 */
+  display: inline-block;
+
+  border: 1px solid #fff;
+  border-radius: 8px;
+
+  list-style-type: none;      /* 把選單符號去掉 */
+  text-align: center;
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  border: 1px solid #ff6600;
+  background-color: #fff;
+}
+
+.menu li:hover a {
+  color: #ff6600;
+  font-weight: 800;
+}
+
+/* content */
+
+h1, h3 {
+  text-align: center;
+}
+
+#about h1 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+#content {
+  position: relative;
+  top: 78px;
+  padding: 15px; 
+}
+
+#content > .container > div {
+  padding: 78px 0;
+}
+
+/* container */
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* hr */
+
+hr .bar {
+  border: 2px solid #ff6600;
+  width: 80px;
+}
+
+/* about me */
+
+#my-avatar img {
+  width: 200px;
+}
+
+#my-avatar {
+  float: left;
+  margin: 20px;
+}
+
+/* my info */
+
+#my-info h1 {
+  margin-bottom: 0;
+}
+
+#my-info h3 {
+  margin: 0;
+}
+
+table {
+  font-size: 14px;
+  text-align: left;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+td {
+  color: #666;
+  padding-left: 10px;
+}
+
+hr {
+  border: 0.5px solid #eee;
+}
+
+/* my-work */
+
+#my-work-gallery {
+  text-align: center;
+}
+
+.item {
+  position: relative;
+  max-width: 30%;
+
+  display: inline-block;    /* 追加屬性 */
+  margin-bottom: 10px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item-info {
+  background-color: rgba(255,255,255,.8);     /* 半透明背景 */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  padding: 25px 10px;
+
+  display: none;
+}
+
+.item:hover .item-info {
+  display: block;
+}
+
+/* contact */
+
+#contact {
+}
+
+form.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-row {     /* 總是用form-row修改以免改到其他不該修改的html格式 */
+  margin-bottom: 15px;
+}
+
+.form-row input, .form-row textarea {      /* 修改訊息輸入框 */
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #d6d9dc;
+  padding: 7px;
+}
+
+.form-row textarea {
+  resize: none;
+  height: 4em;
+}
+
+.form-row button {      /* 修改按鈕 */
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.form-row button[type="submit"] {
+  background-color: #5995da;
+  color: #ffffff;
+}
+
+.form-row button:hover {
+  background-color: #76aeed;
+}
+
+.form-row button:active {
+  background-color: #407fc7;
+}
